@@ -2,8 +2,7 @@
 
 #tao bien chua dia chi mac
 
-read -p "gateway:" gw
-echo $gw
+GATEWAY_IP=`route -n | grep 'UG[ \t]' | awk '{print $2}'`
 
 read -p "MASK:" mask
 echo $mask
@@ -27,6 +26,7 @@ BOOTPROTO=none
 ONBOOT=yes
 IPADDR=$ipadd
 NETMASK=$mask
+GATEWAY=$GATEWAY_IP
 USERCTL=no
 BONDING_OPTS="mode=1 miimon=100"
 
