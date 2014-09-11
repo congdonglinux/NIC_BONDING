@@ -16,11 +16,11 @@ echo $ipadd
 
 touch /etc/sysconfig/network-scripts/ifcfg-bond0
 
-ifcfg-bond0=/etc/sysconfig/network-scripts/ifcfg-bond0
+ifcfgbond0=/etc/sysconfig/network-scripts/ifcfg-bond0
 
 
 #Cau hinh ip cho cong
-cat << EOF >> $ifcfg-bond0
+cat << EOF >> $ifcfgbond0
 
 DEVICE=bond0
 BOOTPROTO=none
@@ -39,13 +39,13 @@ echo "alias bond0 bonding" >>/etc/modprobe.d/bonding.conf
 
 ifcfg-eth1=/etc/sysconfig/network-scripts/ifcfg-eth1
 
-test -f $ifcfg-eth1.bka || cp $ifcfg-eth1 $ifcfg-eth1.bka
+test -f $ifcfgeth1.bka || cp $ifcfgeth1 $ifcfgeth1.bka
 
-rm $ifcfg-eth1
+rm $ifcfgeth1
 
-touch $ifcfg-eth1
+touch $ifcfgeth1
 
-cat << EOF >> $ifcfg-eth1
+cat << EOF >> $ifcfgeth1
 DEVICE=eth1
 MASTER=bond0
 SLAVE=yes
@@ -55,13 +55,13 @@ BOOTPROTO=none
 
 EOF
 #######################################################
-ifcfg-eth0=/etc/sysconfig/network-scripts/ifcfg-eth0
+ifcfgeth0=/etc/sysconfig/network-scripts/ifcfg-eth0
 
-test -f $ifcfg-eth0.bka || cp $ifcfg-eth0 $ifcfg-eth0.bka
-rm $ifcfg-eth0
-touch $ifcfg-eth0
+test -f $ifcfgeth0.bka || cp $ifcfgeth0 $ifcfgeth0.bka
+rm $ifcfgeth0
+touch $ifcfgeth0
 
-cat << EOF >> $ifcfg-eth0
+cat << EOF >> $ifcfgeth0
 
 DEVICE=eth0
 MASTER=bond0
