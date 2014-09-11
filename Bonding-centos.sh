@@ -7,7 +7,7 @@ GATEWAY_IP=`route -n | grep 'UG[ \t]' | awk '{print $2}'`
 read -p "MASK:" mask
 echo $mask
 
-read -p "IP:" ipaddr
+read -p "IP:" ipadd
 
 echo $ipadd
 
