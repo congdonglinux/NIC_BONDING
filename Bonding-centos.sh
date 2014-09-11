@@ -7,10 +7,12 @@ GATEWAY_IP=`route -n | grep 'UG[ \t]' | awk '{print $2}'`
 read -p "MASK:" mask
 echo $mask
 
-ipadd=`/sbin/ifconfig eth1 | grep inet | awk '{print $2}'`
+read -p "IP:" ipaddr
 
 echo $ipadd
 
+
+sleep 3
 #Tao card bond0
 
 touch /etc/sysconfig/network-scripts/ifcfg-bond0
@@ -29,7 +31,7 @@ NETMASK=$mask
 GATEWAY=$GATEWAY_IP
 USERCTL=no
 BONDING_OPTS="mode=1 miimon=100"
-
+BOND-SLAVES eth0 eth1
 EOF
 test -f /etc/modprobe.d/bonding.conf.bka || cp /etc/modprobe.d/bonding.conf /etc/modprobe.d/bonding.conf.bka
 ###Add 
