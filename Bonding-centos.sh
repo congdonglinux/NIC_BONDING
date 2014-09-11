@@ -31,17 +31,16 @@ NETMASK=$mask
 GATEWAY=$GATEWAY_IP
 USERCTL=no
 BONDING_OPTS="mode=1 miimon=100"
-BOND-SLAVES eth0 eth1
 EOF
-test -f /etc/modprobe.d/bonding.conf.bka || cp /etc/modprobe.d/bonding.conf /etc/modprobe.d/bonding.conf.bka
+#test -f /etc/modprobe.d/bonding.conf.bka || cp /etc/modprobe.d/bonding.conf /etc/modprobe.d/bonding.conf.bka
 ###Add 
 echo "alias bond0 bonding" >>/etc/modprobe.d/bonding.conf
 
 #### Cau hinh ip cho cac card
 
-ifcfg-eth1=/etc/sysconfig/network-scripts/ifcfg-eth1
+ifcfgeth1=/etc/sysconfig/network-scripts/ifcfg-eth1
 
-test -f $ifcfgeth1.bka || cp $ifcfgeth1 $ifcfgeth1.bka
+#test -f $ifcfgeth1.bka || cp $ifcfgeth1 $ifcfgeth1.bka
 
 rm $ifcfgeth1
 
