@@ -81,6 +81,7 @@ options bond0 mode=1 miimon=100
 modprobe bonding
 ```
 - Khởi động lại dịch vụ network:
+
 ```
 service network  restart
 ```
