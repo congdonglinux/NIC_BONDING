@@ -15,10 +15,10 @@
  > Chỉ có 1 card mạng được phép hoạt động.
  > chế độ này giúp khả năng chống lỗi.
 - mode=2 (Balance XOR) :
-  > Truyền traffic thông qua  phép toán XOR giữa source MAC nguồn với source MAC đích.
-  > Cung cấp cân bằng tải và khả năng chống chịu lỗi.
+ > Truyền traffic thông qua  phép toán XOR giữa source MAC nguồn với source MAC đích.
+ > Cung cấp cân bằng tải và khả năng chống chịu lỗi.
+
 - mode=3 (Broadcast)
--
 - mode=4 (802.3ad)
 - mode=5 (Balance TLB)
 - mode=6 (Balance ALB)
