@@ -8,18 +8,17 @@
 - Các chế độ thiết lập cho  card chạy chế độ bonding :
  
 - mode=0 (Balance Round Robin):
-> Chế độ này cho phép truyền tải các gói tin đều trên card mạng vật lý.
-> Chế độ này giúp cân bằng tải và chống chịu lỗi.
-- mode=1 (Active backup) :
-> Chế độ này  khi 1 card đang sử dụng bị down , hệ thống sẽ tự động chuyển traffic sang những card  còn lại.
-> Chỉ có 1 card mạng được phép hoạt động.
-> chế độ này giúp khả năng chống lỗi.
+ > Chế độ này cho phép truyền tải các gói tin đều trên card mạng vật lý.
+ > Chế độ này giúp cân bằng tải và chống chịu lỗi.
+- mode=1 (Active backup) : 
+ > Chế độ này  khi 1 card đang sử dụng bị down , hệ thống sẽ tự động chuyển traffic sang những card  còn lại.
+ > Chỉ có 1 card mạng được phép hoạt động.
+ > chế độ này giúp khả năng chống lỗi.
 - mode=2 (Balance XOR) :
-
-> Truyền traffic thông qua  phép toán XOR giữa source MAC nguồn với source MAC đích.
-> Cung cấp cân bằng tải và khả năng chống chịu lỗi.
-
+  > Truyền traffic thông qua  phép toán XOR giữa source MAC nguồn với source MAC đích.
+  > Cung cấp cân bằng tải và khả năng chống chịu lỗi.
 - mode=3 (Broadcast)
+-
 - mode=4 (802.3ad)
 - mode=5 (Balance TLB)
 - mode=6 (Balance ALB)
