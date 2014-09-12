@@ -1,4 +1,4 @@
-﻿NIC BONDING
+﻿NIC BONDING - TRÊN CENTOS6.5
 ===========================================================
 ### Tổng quan về NIC BONDING
 #### 1. NIC BONDING :
@@ -23,13 +23,13 @@
 - mode=4 (802.3ad)
 - mode=5 (Balance TLB)
 - mode=6 (Balance ALB)
-
-````
+- 
 => Thông thường  hay sử dụng các mode =0,1,2 để  thiết lập cho card bonding.
 ####. 2. CÀI ĐẶT VÀ CẤU HÌNH:
 Bài hướng dẫn này  cấu hình trên Centos 6.5
 
 - Tạo card mạng bond0 :
+
 ```
 vi /etc/sysconfig/network-scripts/ifcfg-bond0
 
@@ -54,8 +54,6 @@ MASTER=bond0
 SLAVE=yes
 
 ```
-
-
 - Sửa file cấu hình  card eth0:
 ```
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
@@ -87,12 +85,3 @@ modprobe bonding
 ```
 service network  restart
 ```
-
-
-
-
-
-
-
-
-
