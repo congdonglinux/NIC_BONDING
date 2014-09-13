@@ -71,7 +71,8 @@ SLAVE=yes
  - Thêm vào trong file /etc/modprobe.conf
 
 ```
-# bonding commands 
+- bonding commands
+```
 alias bond0 bonding 
 options bond0 mode=1 miimon=100
 
