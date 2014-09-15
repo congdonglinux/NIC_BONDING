@@ -7,10 +7,10 @@ mac3=`/sbin/ifconfig eth2 | grep HWaddr | awk '{print $5}'`
 
 ipadd=`/sbin/ifconfig eth0 | grep inet | awk '{print $2}'`
 
-read -p "gateway:"gw
+read -p "gateway:" gw
 echo $gw
 
-read -p "MASK:"mask
+read -p "MASK:" mask
 echo $mask
 #cai dat goi ho tro
 sudo apt-get -y install ifenslave
@@ -53,7 +53,7 @@ iface bond0 inet static
 address $ipaddr
 gateway $gw
 netmask $mask
-bond-mode active-backup
+bond-mode 1
 bond-miimon 100
 bond-slaves none
 bond-slaves eth0 eth1
