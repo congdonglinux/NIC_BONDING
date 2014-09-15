@@ -22,7 +22,6 @@
 - mode=4 (802.3ad)
 - mode=5 (Balance TLB)
 - mode=6 (Balance ALB)
-- 
 => Thông thường  hay sử dụng các mode =0,1,2 để  thiết lập cho card bonding.
 ####. 2. CÀI ĐẶT VÀ CẤU HÌNH:
 Bài hướng dẫn này  cấu hình trên Centos 6.5
