@@ -25,4 +25,11 @@ chmod +X *.sh
 ```
  bash Bonding_centos.sh
 ```
--------------------------------------------------------
+Chờ đến khi quá trình cài đặt hoàn thành.Khởi động lại card mạng hoặc khởi động lại máy:
+```
+ /etc/init.d/networking restart
+```
+or
+```
+init 6
+```
