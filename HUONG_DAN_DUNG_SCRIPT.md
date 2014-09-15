@@ -21,7 +21,7 @@ chmod +X *.sh
 ```
   bash Bonding_ubuntu.sh
 ```
--Trên centos :
+- Trên centos :
 ```
  bash Bonding_centos.sh
 ```
