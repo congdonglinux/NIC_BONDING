@@ -3,9 +3,9 @@
 
 mac1=`/sbin/ifconfig eth0 | grep HWaddr | awk '{print $5}'`
 mac2=`/sbin/ifconfig eth1 | grep HWaddr | awk '{print $5}'`
-mac3=`/sbin/ifconfig eth2 | grep HWaddr | awk '{print $5}'`
+#mac3=`/sbin/ifconfig eth2 | grep HWaddr | awk '{print $5}'`
 
-ipadd=`/sbin/ifconfig eth0 | grep inet | awk '{print $2}'`
+ipaddr =`/sbin/ifconfig eth0 | grep inet | awk '{print $2}'`
 
 read -p "gateway:" gw
 echo $gw
