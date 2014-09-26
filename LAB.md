@@ -6,11 +6,23 @@ I.Mục tiêu bài lab :
   - Cấu hình và test  chế độ hoạt động active-backup trong bonding
   
 II. Mô hình thực hiện
+
 <img src="">
-III. Kịch bản bài Lab
+
+
+Thông tin cấu hình :
+
+- OS  : ubuntu 14.04.1
+- RAM : 8G
+- HDD : 50G
+- NIC :  2 card bridged.
+
+III. Kịch bản bài Lab:
+
  - Cài đặt bonding trên HOST chạy trên VMware
- -  Đặt chế độ bonding là active-backup
+ - Đặt chế độ bonding là active-backup
  - Dùng tool nmon,iperf để kiểm tra hoạt động của bonding.
+ 
 IV. Quá trình thực hiện :
 
  1. Cài bằng tay : 
