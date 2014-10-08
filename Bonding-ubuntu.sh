@@ -55,7 +55,6 @@ gateway $gw
 netmask $mask
 bond-mode 1
 bond-miimon 100
-bond-slaves none
 bond-slaves eth0 eth1
 EOF
 
