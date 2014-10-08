@@ -49,10 +49,10 @@ bond-master bond0
 
 #Data bonding
 auto bond0
-iface bond0 inet static
-address $ipaddr
-gateway $gw
-netmask $mask
+iface bond0 inet dhcp
+#address $ipaddr
+#gateway $gw
+#netmask $mask
 bond-mode 1
 bond-miimon 100
 bond-slaves eth0 eth1
