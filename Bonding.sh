@@ -2,13 +2,14 @@
 
 NIC1=eth0
 NIC2=eth1
+NIC3=eth2
 BOND0=bond0
-ADD=172.16.69.254
-GATEWAY=172.16.69.1
-NET=172.16.69.0
+ADD=10.10.10.148
+GATEWAY=10.10.10.1
+NET=10.10.10.0
 MASK=255.255.255.0
 DNS=8.8.8.8
-BROADCAST=172.16.69.255
+BROADCAST=10.10.10.255
 MODE=4
 #---------END DEFINING PARAMETERS-------------------------------------------------------------------------
 #Install ifenslave packet
@@ -36,6 +37,9 @@ auto $NIC1
 iface $NIC1 inet manual
 bond-master bond0
 #Configure second NIC2
+auto $NIC2
+iface $NIC2 inet manual
+bond-master bond0	
 auto $NIC2
 iface $NIC2 inet manual
 bond-master bond0	
