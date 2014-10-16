@@ -1,8 +1,8 @@
 #!/bin/bash -ex
 
-NIC1=eth0
-NIC2=eth1
-NIC3=eth2
+NIC1=em1
+NIC2=em2
+NIC3=em3
 BOND0=bond0
 ADD=10.10.10.148
 GATEWAY=10.10.10.1
